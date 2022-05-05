@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./article.scss";
+import classes from "./article.module.scss";
 
 const Article = () => {
     return <div>Article</div>;

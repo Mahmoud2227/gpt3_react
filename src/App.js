@@ -1,11 +1,21 @@
 import { Blog, Features, Footer, Header, Possibility, WhatGPT3 } from "./containers";
 import { Cta, Brand, Navbar } from "./components";
-import classes from "./App.scss";
+import classes from "./App.module.scss";
 
 function App() {
     return (
-        <div>
-            <h1>GPT-3</h1>
+        <div className={classes.app}>
+            <div className={classes.gradient_bg}>
+                <Navbar />
+                <Header />
+            </div>
+            <Brand />
+            <WhatGPT3 />
+            <Features />
+            <Possibility />
+            <Cta />
+            <Blog />
+            <Footer />
         </div>
     );
 }

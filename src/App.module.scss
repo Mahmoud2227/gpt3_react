@@ -1,0 +1,75 @@
+@use "./SassStyles/variables" as *;
+@use "./SassStyles/mixins" as *;
+@use "./SassStyles/animations" as *;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $color-bg;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+.gradient_bg {
+    background: -moz-radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
+
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
+
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
+}
+
+.gradient_text {
+    background: $gradient-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.section_padding {
+    padding: 4rem 2rem;
+}
+
+.section_margin {
+    margin: 4rem 2rem;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@include mdMinBreakPoint {
+    .section_padding {
+        padding: 4rem;
+    }
+
+    .section_margin {
+        margin: 4rem;
+    }
+}
+
+@include mdMinBreakPoint {
+    .section_padding {
+        padding: 4rem 6rem;
+    }
+
+    .section_margin {
+        margin: 4rem 6rem;
+    }
+}
