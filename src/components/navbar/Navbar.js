@@ -48,8 +48,14 @@ const Navbar = () => {
                     <RiMenu3Line color="#fff" size={27} onClick={() => setIsOpen(true)} />
                 )}
                 {open && (
-                    <div className="scale-up-center">
-                        <Menu />
+                    <div className={classes["gpt3__navbar-menu-container"] + " scale-up-center"}>
+                        <div className={classes["gpt3__navbar-menu-container-links"]}>
+                            <Menu />
+                        </div>
+                        <div className={classes["gpt3__navbar-menu-container-sign"]}>
+                            <p>Sign in</p>
+                            <button type="button">Sign up</button>
+                        </div>
                     </div>
                 )}
             </div>
