@@ -4,8 +4,8 @@ import classes from "./App.module.scss";
 
 function App() {
     return (
-        <div className={classes.app}>
-            <div className={classes.gradient_bg}>
+        <>
+            <div className={classes.gradient__bg}>
                 <Navbar />
                 <Header />
             </div>
@@ -16,7 +16,7 @@ function App() {
             <Cta />
             <Blog />
             <Footer />
-        </div>
+        </>
     );
 }
 

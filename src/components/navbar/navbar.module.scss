@@ -1,0 +1,111 @@
+@use "../../SassStyles/variables" as *;
+@use "../../SassStyles/mixins" as *;
+@use "../../SassStyles/globals" as *;
+
+.gpt3__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+
+    .gpt3__navbar-links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        div {
+            margin-right: 2rem;
+
+            img {
+                width: 62.56px;
+                height: 16.02px;
+            }
+        }
+
+        .gpt3__navbar-links-container {
+            display: none;
+            flex-direction: row;
+            align-items: center;
+
+            @include lgMinBreakPoint {
+                display: flex;
+            }
+        }
+    }
+
+    .gpt3__navbar-sign {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    p {
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: capitalize;
+
+        margin-inline: 1rem;
+        cursor: pointer;
+    }
+
+    button {
+        padding: 0.6rem 2.8rem;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+
+        background: #ff4820;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .gpt3__navbar-menu {
+        margin-left: 1rem;
+
+        display: flex;
+        position: relative;
+
+        @include lgMinBreakPoint {
+            display: none;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+
+            text-align: end;
+            background-color: $color-footer;
+            padding: 2rem;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            margin-top: 1rem;
+            min-width: 210px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+            p {
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+@include lgMinBreakPoint {
+    .gpt3__navbar-links-container {
+        display: flex;
+    }
+} ;
