@@ -33,10 +33,3 @@ a {
     /* global 92%+ browsers support */
     background: radial-gradient(circle at 3% 25%, #002853 0%, #040c18 100%);
 }
-
-.gradient__text {
-    background: $gradient-text;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-}

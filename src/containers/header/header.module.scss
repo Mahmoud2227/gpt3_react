@@ -1,0 +1,156 @@
+@use "../../SassStyles/variables.scss" as *;
+@use "../../SassStyles/mixins.scss" as *;
+
+.gpt3__header {
+    display: flex;
+    flex-direction: column;
+
+    @include lgMinBreakPoint {
+        flex-direction: row;
+    }
+
+    .gpt3__header-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        margin: 0 0 3rem;
+
+        @include lgMinBreakPoint {
+            margin-right: 5rem;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 48px;
+
+            letter-spacing: -0.04em;
+
+            @include smMinBreakPoint {
+                font-size: 48px;
+                line-height: 60px;
+            }
+            @include mdMinBreakPoint {
+                font-size: 62px;
+                line-height: 75px;
+            }
+        }
+
+        > p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: $color-text;
+
+            margin-top: 1.5rem;
+
+            @include smMinBreakPoint {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            @include mdMinBreakPoint {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
+
+        .gpt3__header-content-input {
+            width: 100%;
+            margin: 2rem 0 1rem;
+
+            display: flex;
+
+            input {
+                flex: 2;
+                font-weight: 400;
+                background-color: $color-footer;
+                border: 2px solid $color-footer;
+                border-radius: 5px 0px 0px 5px;
+
+                &::placeholder {
+                    color: #3d6184;
+                }
+            }
+
+            button {
+                flex: 0.6;
+                background-color: #ff4820;
+                border: none;
+                border-radius: 0px 5px 5px 0px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            input,
+            button {
+                width: 100%;
+                min-height: 50px;
+                padding: 0 1rem;
+                font-size: 12px;
+                line-height: 16px;
+                color: #fff;
+            }
+
+            @include smMinBreakPoint {
+                input,
+                button {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            @include mdMinBreakPoint {
+                input,
+                button {
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+            }
+        }
+
+        .gpt3__header-content-people {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            margin-top: 2rem;
+
+            @include mdMinBreakPoint {
+                flex-direction: row;
+            }
+
+            img {
+                width: 181.79px;
+                height: 38px;
+            }
+
+            p {
+                margin: 0;
+
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 38px;
+                text-align: center;
+                color: #ffffff;
+
+                @include mdMinBreakPoint {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+    .gpt3__header-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
