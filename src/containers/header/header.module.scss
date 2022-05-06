@@ -20,7 +20,7 @@
         margin: 0 0 3rem;
 
         @include lgMinBreakPoint {
-            margin-right: 5rem;
+            margin-right: 3rem;
         }
 
         h1 {
@@ -88,7 +88,7 @@
             input,
             button {
                 width: 100%;
-                min-height: 50px;
+                min-height: 70px;
                 padding: 0 1rem;
                 font-size: 12px;
                 line-height: 16px;
@@ -148,6 +148,7 @@
         flex: 1;
         display: flex;
         justify-content: center;
+        align-items: flex-start;
 
         img {
             width: 100%;
