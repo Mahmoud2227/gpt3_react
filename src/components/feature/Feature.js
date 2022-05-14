@@ -2,7 +2,6 @@ import React from "react";
 import "./feature.scss";
 
 const Feature = ({ title, text, classNames }) => {
-    console.log(classNames);
     return (
         <div
             className={`gpt3-features-container__feature${classNames ? " " + classNames.main : ""}`}
