@@ -1,0 +1,54 @@
+@use "../../SassStyles/variables" as *;
+@use "../../SassStyles/mixins" as *;
+
+.gpt3-features {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include lgMinBreakPoint {
+        flex-direction: row;
+    }
+    .gpt3-features-header {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        text-align: left;
+        margin-right: 2rem;
+
+        @include lgMinBreakPoint {
+            margin-right: 5rem;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 38px;
+            margin-bottom: 2rem;
+
+            @include smMinBreakPoint {
+                font-size: 34px;
+                line-height: 45px;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            color: $color-subtext;
+        }
+    }
+
+    .gpt3-features-container {
+        flex: 1.5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+}

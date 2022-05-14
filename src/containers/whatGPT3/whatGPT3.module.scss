@@ -76,13 +76,19 @@
     .whatgpt3-header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         margin-bottom: 0rem;
 
-        @include mdMinBreakPoint {
+        @include smMinBreakPoint {
             flex-direction: row;
+            margin-bottom: 1rem;
+        }
+
+        @include mdMinBreakPoint {
             align-items: center;
             margin: 4rem 0 2rem;
         }
+
         h1 {
             font-size: 28px;
             line-height: 40px;

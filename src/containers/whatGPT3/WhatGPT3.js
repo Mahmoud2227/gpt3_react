@@ -42,21 +42,14 @@ const WhatGPT3 = () => {
                 <p>Explore The Library</p>
             </div>
             <div className={classes["whatgpt3-container"]}>
-                <Feature
-                    title={featureProps[1].title}
-                    text={featureProps[1].text}
-                    classNames={FeatureClasses}
-                />
-                <Feature
-                    title={featureProps[2].title}
-                    text={featureProps[2].text}
-                    classNames={FeatureClasses}
-                />
-                <Feature
-                    title={featureProps[3].title}
-                    text={featureProps[3].text}
-                    classNames={FeatureClasses}
-                />
+                {featureProps.slice(1).map((feature, i) => (
+                    <Feature
+                        key={feature.text + i}
+                        title={feature.title}
+                        text={feature.text}
+                        classNames={FeatureClasses}
+                    />
+                ))}
             </div>
         </div>
     );
