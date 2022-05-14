@@ -1,0 +1,84 @@
+@use "../../SassStyles/variables" as *;
+@use "../../SassStyles/mixins" as *;
+
+.gpt3__cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 1rem;
+    color: white;
+    background: $gradient-bar;
+
+    padding: 2rem;
+    margin: 4rem 2rem;
+
+    @include smMinBreakPoint {
+        margin: 4rem;
+    }
+
+    @include mdMinBreakPoint {
+        flex-direction: row;
+    }
+
+    .gpt3__cta-content {
+        p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 30px;
+            color: #0e0e0e;
+        }
+
+        h3 {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 32px;
+            color: #000000;
+            text-align: center;
+
+            @include smMinBreakPoint {
+                font-size: 24px;
+                line-height: 45px;
+                text-align: left;
+            }
+        }
+    }
+
+    .gpt3__cta-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0 0;
+
+        @include mdMinBreakPoint {
+            margin-left: 2rem;
+        }
+
+        button {
+            background-color: #000000;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            min-width: 150px;
+
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 28px;
+            color: white;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+
+            transition: 0.5s;
+
+            &:hover {
+                background-color: #050505b1;
+            }
+
+            @include smMinBreakPoint {
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+    }
+}

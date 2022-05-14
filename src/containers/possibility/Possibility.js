@@ -6,7 +6,7 @@ import classes from "./possibility.module.scss";
 
 const Possibility = () => {
     return (
-        <div className={classes["gpt3__possibility"] + " section__padding"} id="Possibility">
+        <div className={classes["gpt3__possibility"] + " section__padding"} id="possibility">
             <div className={classes["gpt3__possibility-image"]}>
                 <img src={possibilityImage} alt="Possibility" />
             </div>
