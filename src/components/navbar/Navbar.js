@@ -28,7 +28,7 @@ const Navbar = () => {
     const [open, setIsOpen] = useState(false);
 
     return (
-        <div className={classes.gpt3__navbar}>
+        <div className={classes.gpt3__navbar + " section__padding"}>
             <div className={classes["gpt3__navbar-links"]}>
                 <div>
                     <img src={logo} alt="logo" />

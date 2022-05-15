@@ -7,15 +7,6 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem;
-
-    @include smMinBreakPoint {
-        padding: 2rem 4rem;
-    }
-    @include mdMinBreakPoint {
-        padding: 2rem 6rem;
-    }
-
     .gpt3__navbar-links {
         flex: 1;
         display: flex;

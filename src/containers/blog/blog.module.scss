@@ -1,0 +1,83 @@
+@use "../../SassStyles/mixins" as *;
+
+.gpt3__blog {
+    display: flex;
+    flex-direction: column;
+
+    .gpt3__blog-header {
+        width: 100%;
+        text-align: left;
+
+        margin-bottom: 5rem;
+
+        h1 {
+            font-weight: 800;
+            font-size: 34px;
+            line-height: 42px;
+            letter-spacing: -0.04em;
+
+            @include smMinBreakPoint {
+                font-size: 46px;
+                line-height: 52px;
+            }
+
+            @include mdMinBreakPoint {
+                font-size: 62px;
+                line-height: 75px;
+            }
+        }
+    }
+
+    .gpt3__blog-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include lgMinBreakPoint {
+            flex-direction: row;
+        }
+
+        .group1 {
+            flex: 0.525;
+            margin: 2rem 0;
+
+            @include lgMinBreakPoint {
+                margin-right: 3rem;
+                margin-block: 0;
+            }
+
+            .gpt3__blog-container-article {
+                width: 100%;
+
+                @include mdMinBreakPoint {
+                    width: 100%;
+                }
+
+                .gpt3__blog-container-article-image {
+                    height: 250px;
+                    @include lgMinBreakPoint {
+                        height: unset;
+                    }
+                }
+            }
+        }
+
+        .group2 {
+            flex: 1;
+
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 3rem;
+
+            @include mdMinBreakPoint {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gpt3__blog-container-article {
+                width: 100%;
+                @include mdMinBreakPoint {
+                    width: unset;
+                }
+            }
+        }
+    }
+}
