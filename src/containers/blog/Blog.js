@@ -12,7 +12,7 @@ const Blog = () => {
     };
 
     return (
-        <div className={classes["gpt3__blog"] + " section__padding"}>
+        <div className={classes["gpt3__blog"] + " section__padding"} id="blog">
             <div className={classes["gpt3__blog-header"]}>
                 <h1 className="gradient__text">
                     A lot is happening,
