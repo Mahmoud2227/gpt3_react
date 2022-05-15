@@ -1,0 +1,140 @@
+@use "../../SassStyles/variables" as *;
+@use "../../SassStyles/mixins" as *;
+
+.gpt3__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background: $color-footer;
+
+    .gpt3__footer-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-weight: 800;
+            font-size: 34px;
+            line-height: 42px;
+            text-align: center;
+            letter-spacing: -0.04em;
+
+            @include smMinBreakPoint {
+                font-size: 44px;
+                line-height: 50px;
+            }
+
+            @include mdMinBreakPoint {
+                font-size: 62px;
+                line-height: 75px;
+            }
+        }
+    }
+
+    .gpt3__footer-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 1rem;
+        margin-bottom: 5rem;
+        border: 1px solid white;
+
+        cursor: pointer;
+        transition: 0.5s;
+
+        @include smMinBreakPoint {
+            margin-bottom: 11.5rem;
+        }
+
+        &:hover {
+            background: white;
+
+            p {
+                color: $color-footer;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            color: #ffffff;
+            transition: 0.5s;
+
+            @include smMinBreakPoint {
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .gpt3__footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        width: 100%;
+        text-align: left;
+
+        div {
+            width: 250px;
+            margin: 1rem 0;
+
+            @include smMinBreakPoint {
+                margin: 1rem;
+            }
+        }
+
+        .gpt3__footer-links-logo {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 118px;
+                height: 30px;
+
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+
+        .gpt3__footer-links-div {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            h4 {
+                font-size: 14px;
+                line-height: 16px;
+
+                margin-bottom: 2rem;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 14px;
+                margin-block: 0.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .gpt3__footer-copyright {
+        margin-top: 2rem;
+        text-align: center;
+        width: 100%;
+
+        p {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
