@@ -1,0 +1,57 @@
+@use "../../SassStyles/variables" as *;
+@use "../../SassStyles/mixins" as *;
+
+.gpt3__blog-container-article {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    background: $color-footer;
+
+    .gpt3__blog-container-article-image {
+        width: 100%;
+        height: 100%;
+        background: $color-footer;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .gpt3__blog-container-article-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem 1.5rem;
+        height: 100%;
+
+        p {
+            font-weight: 700;
+            font-size: 11.649px;
+            line-height: 35px;
+            color: #ffffff;
+
+            &:last-child {
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            color: #ffffff;
+
+            margin-bottom: 5rem;
+            cursor: pointer;
+
+            @include smMinBreakPoint {
+                font-size: 25.11px;
+                line-height: 30px;
+            }
+        }
+    }
+}
